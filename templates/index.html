@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>YouTube to MP3</title>
+		<link rel="stylesheet" href="/static/css/styles.css" />
+	</head>
+	<body>
+		<div id="loadingSpinner">
+			<div class="spinner"></div>
+		</div>
+
+		<form id="downloadForm">
+			Enter YouTube URL: <input type="text" name="url" id="url" /><br />
+			<input type="submit" value="Submit" />
+		</form>
+		<div id="downloadLink" style="display: none">
+			Your file <span id="fileName"></span> is ready for download:
+			<a href="/download" id="downloadButton">Download MP3</a>
+		</div>
+
+		<script src="/static/js/scripts.js"></script>
+	</body>
+</html>
