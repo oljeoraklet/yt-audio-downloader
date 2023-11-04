@@ -19,5 +19,6 @@ document
 				document.getElementById("downloadButton").href =
 					"/download?fileName=" + encodeURIComponent(data.fileName);
 				document.getElementById("downloadLink").style.display = "block";
+				document.getElementById("downloadForm").reset();
 			});
 	});

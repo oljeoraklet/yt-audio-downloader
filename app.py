@@ -11,9 +11,11 @@ app.secret_key = 'your_secret_key'  # Replace with your own secret key
 def cleanup():
     now = datetime.now()
     for filename in os.listdir('.'):
+        print(filename)
         if filename.endswith('.mp3'):
             file_time = datetime.fromtimestamp(os.path.getctime(filename))
-            if now - file_time > timedelta(minutes=15):
+            print(file_time)
+            if now - file_time > timedelta(minutes=2):
                 os.remove(filename)
     # Schedule the cleanup function to run again in 15 minutes
     threading.Timer(15 * 60, cleanup).start()
